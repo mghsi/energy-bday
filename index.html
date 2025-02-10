@@ -14,15 +14,46 @@
     <link rel="stylesheet" href="anim.css">
 </head>
 
-<body class=" max-w-screen-2xl bg-slate-100 mx-auto min-h-screen font-popins-regular">
+<body class=" max-w-screen-2xl bg-slate-100 mx-auto min-h-screen font-popins-regular overflow-x-hidden scroll-smooth">
     <div class=" flex flex-col max-w-screen-xl mx-auto relative">
         <!-- SIDE BAR -->
-        <aside id="sidebar" class=" absolute top-0 left-0  bg-opacity-0 h-[100svh] z-20 w-full backdrop-blur-sm justify-end flex">
-            <div class=" flex bg-slate-100 h-full w-1/2 float-righ relativet items-start px-2 py-3"
-                data-aos="fade-left">
-                <button class=" font-popins-semibold text-sm" onclick="toggleMenu()">
+        <aside id="sidebar"
+            class=" top-0 left-0 h-[100svh] fixed z-20 w-full backdrop-blur-sm justify-start flex shadow-md  bg-slate-100 relativet px-4 py-3 flex-col gap-5 hidden">
+
+            <div class=" flex items-center justify-end mb-2">
+                <button id="close-btn" class=" font-popins-semibold text-sm hover:bg-gray-200 rounded-full py-2 px-5"
+                    onclick="toggleMenu('close')">
                     <i class="fa-solid fa-x"></i>
                 </button>
+            </div>
+            <div class=" flex flex-1 h-full w-full">
+                <ul class="flex h-full flex-col justify-start items-center w-full gap-5">
+                    <li class=" w-full">
+                        <a onclick="toggleMenu('close')" href="#hero"
+                            class=" w-full h-full px-2 py-4 rounded-full font-popins-semibold text-sm flex items-center justify-center hover:bg-gray-200 ">
+                            Home
+                        </a>
+                    </li>
+                    <li class="  w-full ">
+                        <a onclick="toggleMenu('close')" href="#"
+                            class=" w-full h-full px-2 py-4 rounded-full  font-popins-semibold text-sm flex items-center justify-center hover:bg-gray-200 ">
+                            About
+                        </a>
+                    </li>
+                    <li class="  w-full">
+                        <a onclick="toggleMenu('close')" href="#"
+                            class=" w-full h-full px-2 py-4  rounded-full font-popins-semibold text-sm flex items-center justify-center hover:bg-gray-200 ">
+                            contact
+                        </a>
+                    </li>
+                    <li class="  w-full">
+                        <a onclick="toggleMenu('close')" href="#"
+                            class=" w-full h-full px-2 py-4  rounded-full font-popins-semibold text-sm flex items-center justify-center hover:bg-gray-200 ">
+                            Close
+                        </a>
+                    </li>
+
+                </ul>
             </div>
         </aside>
         <!-- SIDE BAR -->
@@ -45,9 +76,9 @@
                         Contact
                     </div>
                 </div>
-                <button
+                <button id="open-btn"
                     class=" relative font-popins-semibold text-sm items-center justify-center flex md:hidden hover:bg-gray-200 py-2 px-4 rounded-full z-30"
-                    onclick="toggleMenu()">
+                    onclick="toggleMenu('open')">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </nav>
@@ -57,7 +88,7 @@
         <!-- MAIN SECTION -->
         <main class="flex-1">
             <!-- HERO BANNER -->
-            <section class=" h-[88svh] mt-2 mb-2 flex flex-col-reverse md:flex-row relative">
+            <section class=" h-[88svh] mt-2 mb-2 flex flex-col-reverse md:flex-row relative" id="hero">
                 <!-- HERO BOTTOM/LEFT -->
                 <div class=" flex relative items-center justify-start md:px-10 xl:px-0 px-10 md:justify-center h-full md:flex-1"
                     data-aos="fade-right">
