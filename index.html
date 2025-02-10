@@ -4,19 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon.svg">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="anim.css">
 </head>
 
 <body class=" max-w-screen-2xl bg-slate-100 mx-auto min-h-screen">
-    <div class=" flex flex-col max-w-screen-xl bg-red-100 mx-auto">
-        <header>
-            <nav>
-
+    <div class=" flex flex-col max-w-screen-xl mx-auto relative">
+        <header class=" mt-2 absolute top-0 left-0 w-full">
+            <nav
+                class="flex rounded-2xl justify-evenly items-center py-2 px-5 shadow-lg bg-opacity-10 backdrop-blur-md">
+                <div class=" font-popins-black text-2xl flex text-center">
+                    Its ME!
+                </div>
+                <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                    <i class="fa-solid fa-house mr-2"></i>
+                    Home 
+                </div>
+                <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                    About
+                </div>
+                <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                    Contact
+                </div>
             </nav>
         </header>
     </div>
