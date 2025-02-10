@@ -14,26 +14,90 @@
     <link rel="stylesheet" href="anim.css">
 </head>
 
-<body class=" max-w-screen-2xl bg-slate-100 mx-auto min-h-screen">
+<body class=" max-w-screen-2xl bg-slate-100 mx-auto min-h-screen font-popins-regular">
     <div class=" flex flex-col max-w-screen-xl mx-auto relative">
-        <header class=" mt-2 absolute top-0 left-0 w-full">
-            <nav
-                class="flex rounded-2xl justify-evenly items-center py-2 px-5 shadow-lg bg-opacity-10 backdrop-blur-md">
-                <div class=" font-popins-black text-2xl flex text-center">
-                    Its ME!
+        <!-- NAVBAR HEADER-->
+        <header class=" mt-2 top-0 left-0 w-full sticky z-10" data-aos="fade-down">
+            <nav class="flex rounded-2xl items-center py-2 px-5 shadow-lg bg-opacity-10 backdrop-blur-md">
+                <div class="  font-popins-semibold text-sm flex flex-1 justify-center">
+                    It's <span class="font-popins-black text-xl"> ME!</span>
                 </div>
-                <div class=" font-popins-semibold text-sm flex items-center justify-center">
-                    <i class="fa-solid fa-house mr-2"></i>
-                    Home 
+                <div class="flex-1 md:flex justify-around hidden">
+                    <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                        <i class="fa-solid fa-house mr-2"></i>
+                        Home
+                    </div>
+                    <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                        About
+                    </div>
+                    <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                        Contact
+                    </div>
                 </div>
-                <div class=" font-popins-semibold text-sm flex items-center justify-center">
-                    About
-                </div>
-                <div class=" font-popins-semibold text-sm flex items-center justify-center">
-                    Contact
+                <div class="  font-popins-semibold text-sm items-center justify-center flex md:hidden">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
             </nav>
         </header>
+        <!-- NAVBAR HEADER-->
+
+        <!-- MAIN SECTION -->
+        <main class="flex-1">
+            <!-- HERO BANNER -->
+            <section class=" h-[88svh] mt-2 mb-2 flex flex-col-reverse md:flex-row relative">
+                <!-- HERO BOTTOM/LEFT -->
+                <div
+                    class=" flex relative items-center justify-start md:px-10 xl:px-0 px-10 md:justify-center h-full md:flex-1" data-aos="fade-right">
+                    <div>
+                        <h1 class="text-sm md:text-base">
+                            Hi there, its me! <br>
+                            <span class=" font-popins-black text-2xl md:text-4xl tracking-wider">
+                                MY NAME
+                            </span>
+                        </h1>
+                        <h2 class=" text-sm md:text-base">
+                            I am a web developer!
+                        </h2>
+                        <div class=" text-xs md:text-sm mt-2">
+                            <p class=" text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                                sequi ad error quia
+                                maiores fugit. Similique laudantium quam nemo, at rerum neque debitis recusandae
+                                voluptate, eligendi nesciunt adipisci consequuntur numquam!</p>
+                        </div>
+                        <div class=" flex justify-start items-center gap-10 mt-2">
+                            <div>
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- HERO BOTTOM/LEFT -->
+
+                <!-- HERO TOP/RIGHT -->
+                <div class="flex relative h-full md:flex-1" data-aos="zoom-in">
+                    <div class="absolute w-1/2 -translate-x-1/2 -translate-y-1/2 blob h-1/2 bg-black top-1/2 left-1/2">
+                    </div>
+                    <img class=" invert drop-shadow-lg absolute object-cover w-1/2 -translate-x-1/2 -translate-y-1/2 md:h-auto md:w-2/3 top-1/2 hover:scale-105 left-1/2"
+                        src="/assets/favicon.svg" alt="">
+                </div>
+                <!-- HERO TOP/RIGHT -->
+            </section>
+            <!-- HERO BANNER -->
+
+
+            <section class=" h-[88svh] mt-2 mb-2 flex ">
+            </section>
+        </main>
+        <!-- MAIN SECTION -->
     </div>
 </body>
 
