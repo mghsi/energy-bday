@@ -4,6 +4,11 @@
 .blob {
   border-radius: 35% 65% 70% 30% / 57% 59% 41% 43%;
 }
+.text-border {
+  -webkit-text-stroke: 1px black; 
+  color: transparent; 
+}
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
