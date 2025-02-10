@@ -4,6 +4,7 @@ function toggleMenu(state) {
     let closeBtn = document.getElementById("close-btn");
 
     if (state === 'open') {
+        document.body.style.overflowY = "hidden";
         sidebar.classList.remove("hidden")
         sidebar.classList.add("flex")
         openBtn.classList.remove("animate-rotate-right")
@@ -12,6 +13,7 @@ function toggleMenu(state) {
         closeBtn.classList.add("animate-rotate-left")
         sidebar.classList.add("animate-slide-in");
     } else {
+        document.body.style.overflowY = "";
         sidebar.classList.add("animate-slide-out");
         openBtn.classList.remove("animate-rotate-left")
         closeBtn.classList.remove("animate-rotate-left")
