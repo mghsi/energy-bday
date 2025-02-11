@@ -94,10 +94,10 @@
   border-radius: 5px;
   padding: 0.5rem 1rem;
   border: 1px solid black;
-  box-shadow: 0 0.5rem 1rem -0.25rem  rgba(0, 0, 0, 0.173);
+  box-shadow: 0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.173);
 }
 
-.scroller__inner li:hover{
+.scroller__inner li:hover {
   background-color: rgba(128, 128, 128, 0.248);
 }
 
