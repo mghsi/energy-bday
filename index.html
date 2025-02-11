@@ -35,7 +35,7 @@
                         </a>
                     </li>
                     <li class="  w-full ">
-                        <a onclick="toggleMenu('close')" href="#"
+                        <a onclick="toggleMenu('close')" href="#about"
                             class=" w-full h-full px-2 py-4 rounded-full  font-popins-semibold text-sm flex items-center justify-center hover:bg-gray-200 ">
                             About
                         </a>
@@ -65,16 +65,16 @@
                     It's <span class="font-popins-black text-xl"> ME!</span>
                 </div>
                 <div class="flex-1 md:flex justify-around hidden">
-                    <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                    <a href="#hero" class=" font-popins-semibold text-sm flex items-center justify-center">
                         <i class="fa-solid fa-house mr-2"></i>
                         Home
-                    </div>
-                    <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                    </a>
+                    <a href="#about" class=" font-popins-semibold text-sm flex items-center justify-center">
                         About
-                    </div>
-                    <div class=" font-popins-semibold text-sm flex items-center justify-center">
+                    </a>
+                    <a class=" font-popins-semibold text-sm flex items-center justify-center">
                         Contact
-                    </div>
+                    </a>
                 </div>
                 <button id="open-btn"
                     class=" relative font-popins-semibold text-sm items-center justify-center flex md:hidden hover:bg-gray-200 py-2 px-4 rounded-full z-30"
@@ -88,7 +88,7 @@
         <!-- MAIN SECTION -->
         <main class="flex-1">
             <!-- HERO BANNER -->
-            <section class=" h-[88svh] mt-2 mb-2 flex flex-col-reverse md:flex-row relative" id="hero">
+            <section class=" h-[92svh] mt-2 mb-2 flex flex-col-reverse md:flex-row relative " id="hero">
                 <!-- HERO BOTTOM/LEFT -->
                 <div class=" flex relative items-center justify-start xl:px-0 px-5 xl:justify-center h-full md:flex-1"
                     data-aos="fade-right">
@@ -128,9 +128,10 @@
 
                 <!-- HERO TOP/RIGHT -->
                 <div class="flex relative h-full md:flex-1" data-aos="zoom-in">
-                    <div class="absolute w-1/2 -translate-x-1/2 -translate-y-1/2 blob h-1/2 bg-black top-1/2 left-1/2">
+                    <div
+                        class="absolute w-1/2 -translate-x-1/2 -translate-y-1/2 blob aspect-square bg-black top-1/2 left-1/2">
                     </div>
-                    <img class=" invert drop-shadow-lg absolute object-cover h-full -translate-x-1/2 -translate-y-1/2 xl:h-auto xl:w-2/3 top-1/2 hover:scale-105 left-1/2"
+                    <img class=" invert drop-shadow-lg absolute object-cover h-full -translate-x-1/2 -translate-y-1/2 md:h-auto md:w-2/3 top-1/2 hover:scale-105 left-1/2"
                         src="./assets/favicon.svg" alt="">
                 </div>
                 <!-- HERO TOP/RIGHT -->
@@ -138,69 +139,75 @@
             <!-- HERO BANNER -->
 
             <!-- ABOUT -->
-            <section class="mt-2 mb-2 flex  flex-col items-center py-5 px-5" data-aos="fade-up">
-                <h2 class=" font-popins-black text-2xl md:text-4xl"><span class=" text-border">ABOUT</span> ME</h2>
-                <div class=" text-justify xl:text-center mt-5">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda molestias consequatur
-                        perspiciatis totam officia tenetur explicabo nulla repellendus tempore sunt corporis unde quas
-                        ullam, hic ipsum asperiores deleniti. Sapiente, libero.</p>
+            <section
+                class=" min-h-[88svh] mt-2 mb-2 flex  xl:flex-row-reverse flex-col text-center items-center py-5 px-5 relative overflow-hidden"
+                id="about">
+                <div data-aos="fade-up">
+                    <h1 class=" font-popins-black text-2xl md:text-4xl"><span class=" text-border">ABOUT</span> ME</h1>
+                    <div class=" text-justify mt-5">
+                        <p><span class="font-popins-bold underline tracking-tighter">Whoami?</span> I am a Lorem ipsum
+                            dolor sit amet consectetur, adipisicing elit. Assumenda molestias consequatur
+                            perspiciatis totam officia tenetur explicabo nulla repellendus tempore sunt corporis unde
+                            quas
+                            ullam, hic ipsum asperiores deleniti. Sapiente, libero.</p>
+                    </div>
+                    <div class=" text-justify mt-5">
+                        <p><span class="font-popins-bold underline tracking-tighter">EducationQualification</span>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda molestias consequatur
+                            perspiciatis totam officia tenetur explicabo nulla repellendus tempore sunt corporis unde
+                            quas
+                            ullam, hic ipsum asperiores deleniti. Sapiente, libero.</p>
+                    </div>
+
                 </div>
-                <div class=" text-justify xl:text-center mt-5">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda molestias consequatur
-                        perspiciatis totam officia tenetur explicabo nulla repellendus tempore sunt corporis unde quas
-                        ullam, hic ipsum asperiores deleniti. Sapiente, libero.</p>
+
+                <!-- SKILLS -->
+                <!-- MIN 6 ITEMS IN EACH SECTION-->
+                <div class="flex  flex-col items-center mt-10 px-5" data-aos="fade-up">
+                    <!-- BASE -->
+                    <div class="scroller max-w-md md:max-w-xl xl:max-w-2xl" data-speed="fast">
+                        <ul
+                            class="tag-list scroller__inner font-popins-semibold tracking-tighter uppercase text-sm md:text-base xl:text-xl">
+                            <li><i class="fa-brands fa-html5"></i>HTML</li>
+                            <li><i class="fa-brands fa-css"></i>CSS</li>
+                            <li><i class="fa-brands fa-js"></i>JS</li>
+                            <li><i class="fa-brands fa-php"></i>PHP</li>
+                            <li><i class="fa-brands fa-java"></i>JAVA</li>
+                            <li><i class="fa-brands fa-python"></i>PYTHON</li>
+                        </ul>
+                    </div>
+                    <!-- BASE -->
+
+                    <!-- FRAMEWORK -->
+                    <div class="scroller max-w-md md:max-w-xl xl:max-w-2xl" data-speed="slow" data-direction="right">
+                        <ul
+                            class="tag-list scroller__inner font-popins-semibold tracking-tighter uppercase text-sm md:text-base xl:text-xl">
+                            <li><i class="fa-brands fa-react"></i>React</li>
+                            <li><i class="fa-brands fa-node"></i>Node</li>
+                            <li><i class="fa-brands fa-python"></i>Django</li>
+                            <li><i class="fa-brands fa-php"></i>Laravel</li>
+                            <li><i class="fa-brands fa-c"></i>Asp.Net</li>
+                            <li><i class="fa-brands fa-s"></i>SvelteKit</li>
+                        </ul>
+                    </div>
+                    <!-- FRAMEWORK -->
+
+                    <!-- DEVOPS -->
+                    <div class="scroller max-w-md md:max-w-xl xl:max-w-2xl" data-speed="fast" data-direction="left">
+                        <ul
+                            class="tag-list scroller__inner font-popins-semibold tracking-tighter uppercase text-sm md:text-base xl:text-xl">
+                            <li><i class="fa-brands fa-git"></i>GIT</li>
+                            <li><i class="fa-brands fa-docker"></i>docker</li>
+                            <li><i class="fa-brands fa-k"></i>kubernetes</li>
+                            <li><i class="fa-brands fa-github"></i>Github</li>
+                            <li><i class="fa-brands fa-aws"></i>aws</li>
+                            <li><i class="fa-brands fa-a"></i>Azure</li>
+                        </ul>
+                    </div>
+                    <!-- DEVOPS -->
                 </div>
             </section>
             <!-- ABOUT -->
-
-            <!-- SKILLS -->
-            <section class="mt-5 mb-2 flex  flex-col items-center py-5 px-5 overflow-hidden" data-aos="fade-up">
-                <h2 class=" font-popins-black text-2xl md:text-4xl">MY <span class=" text-border">SKILLS</span> </h2>
-
-                <!-- MIN 6 ITEMS IN EACH SECTION-->
-                <!-- BASE -->
-                <div class="scroller max-w-md md:max-w-xl xl:max-w-2xl mt-5" data-speed="fast">
-                    <ul
-                        class="tag-list scroller__inner font-popins-semibold tracking-tighter uppercase text-sm md:text-base xl:text-xl">
-                        <li><i class="fa-brands fa-html5"></i>HTML</li>
-                        <li><i class="fa-brands fa-css"></i>CSS</li>
-                        <li><i class="fa-brands fa-js"></i>JS</li>
-                        <li><i class="fa-brands fa-php"></i>PHP</li>
-                        <li><i class="fa-brands fa-java"></i>JAVA</li>
-                        <li><i class="fa-brands fa-python"></i>PYTHON</li>
-                    </ul>
-                </div>
-                <!-- BASE -->
-
-                <!-- FRAMEWORK -->
-                <div class="scroller max-w-md md:max-w-xl xl:max-w-2xl" data-speed="slow" data-direction="right">
-                    <ul
-                        class="tag-list scroller__inner font-popins-semibold tracking-tighter uppercase text-sm md:text-base xl:text-xl">
-                        <li><i class="fa-brands fa-react"></i>React</li>
-                        <li><i class="fa-brands fa-node"></i>Node</li>
-                        <li><i class="fa-brands fa-python"></i>Django</li>
-                        <li><i class="fa-brands fa-php"></i>Laravel</li>
-                        <li><i class="fa-brands fa-c"></i>Asp.Net</li>
-                        <li><i class="fa-brands fa-s"></i>SvelteKit</li>
-                    </ul>
-                </div>
-                <!-- FRAMEWORK -->
-
-                <!-- DEVOPS -->
-                <div class="scroller max-w-md md:max-w-xl xl:max-w-2xl" data-speed="fast" data-direction="left">
-                    <ul
-                        class="tag-list scroller__inner font-popins-semibold tracking-tighter uppercase text-sm md:text-base xl:text-xl">
-                        <li><i class="fa-brands fa-git"></i>GIT</li>
-                        <li><i class="fa-brands fa-docker"></i>docker</li>
-                        <li><i class="fa-brands fa-k"></i>kubernetes</li>
-                        <li><i class="fa-brands fa-github"></i>Github</li>
-                        <li><i class="fa-brands fa-aws"></i>aws</li>
-                        <li><i class="fa-brands fa-a"></i>Azure</li>
-                    </ul>
-                </div>
-                <!-- DEVOPS -->
-            </section>
-            <!-- SKILLS -->
 
         </main>
         <!-- MAIN SECTION -->

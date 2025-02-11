@@ -1,3 +1,38 @@
+@font-face {
+  font-family: "popins-black";
+  src: url("./assets/fonts/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: "popins-bold";
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "popins-extrabold";
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "popins-extralight";
+  src: url("./assets/fonts/Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "popins-medium";
+  src: url("./assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "popins-semibold";
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: "popins-thin";
+  src: url("./assets/fonts/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: "popins-regular";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -598,6 +633,10 @@ video {
   z-index: 30;
 }
 
+.z-\[-1\] {
+  z-index: -1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -619,12 +658,48 @@ video {
   margin-top: 1.25rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .flex {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .h-1\/2 {
@@ -643,8 +718,32 @@ video {
   height: 100%;
 }
 
+.h-\[644px\] {
+  height: 644px;
+}
+
+.h-\[90svh\] {
+  height: 90svh;
+}
+
+.h-\[92svh\] {
+  height: 92svh;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[720px\] {
+  min-height: 720px;
+}
+
+.min-h-\[644px\] {
+  min-height: 644px;
+}
+
+.min-h-\[88svh\] {
+  min-height: 88svh;
 }
 
 .w-1\/2 {
@@ -653,6 +752,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
 }
 
 .max-w-md {
@@ -681,6 +784,30 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -691,6 +818,14 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -804,6 +939,14 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -818,6 +961,10 @@ video {
 
 .font-popins-semibold {
   font-family: popins-semibold;
+}
+
+.font-popins-bold {
+  font-family: popins-bold;
 }
 
 .text-2xl {
@@ -850,6 +997,10 @@ video {
 
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .shadow-lg {
@@ -961,6 +1112,12 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
 }
 
+@media (min-width: 640px) {
+  .sm\:min-h-0 {
+    min-height: 0px;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -968,6 +1125,14 @@ video {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-auto {
+    height: auto;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .md\:max-w-xl {
@@ -980,6 +1145,10 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 
   .md\:px-10 {
@@ -1016,6 +1185,10 @@ video {
     max-width: 42rem;
   }
 
+  .xl\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
   .xl\:justify-center {
     justify-content: center;
   }
@@ -1027,6 +1200,10 @@ video {
 
   .xl\:text-center {
     text-align: center;
+  }
+
+  .xl\:text-justify {
+    text-align: justify;
   }
 
   .xl\:text-base {
