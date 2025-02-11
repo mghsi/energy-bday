@@ -41,7 +41,7 @@
                         </a>
                     </li>
                     <li class="  w-full">
-                        <a onclick="toggleMenu('close')" href="#"
+                        <a onclick="toggleMenu('close')" href="#contact"
                             class=" w-full h-full px-2 py-4  rounded-full font-popins-semibold text-sm flex items-center justify-center hover:bg-gray-200 ">
                             contact
                         </a>
@@ -72,7 +72,7 @@
                     <a href="#about" class=" font-popins-semibold text-sm flex items-center justify-center">
                         About
                     </a>
-                    <a class=" font-popins-semibold text-sm flex items-center justify-center">
+                    <a href="#contact" class=" font-popins-semibold text-sm flex items-center justify-center">
                         Contact
                     </a>
                 </div>
@@ -211,9 +211,8 @@
 
             <!-- Experience -->
             <section class=" mt-2 mb-2 flex  flex-col  items-center py-5 px-5  relative overflow-hidden" id="expirence">
-                <h1 class=" font-popins-black text-2xl md:text-4xl mb-10" data-aos="fade-up"><span
-                        class=" text-border">Work</span>
-                    Experience
+                <h1 class=" font-popins-black text-2xl md:text-4xl mb-10" data-aos="fade-up">Work<span
+                        class=" text-border"> Experience</span>
                 </h1>
 
                 <div class="flex xl:gap-0 gap-2 w-full flex-col lg:flex-row ">
@@ -381,6 +380,37 @@
                 </div>
             </section>
             <!-- LatestWork -->
+
+            <!-- Contact -->
+            <section class="flex mt-2 mb-2 flex-col items-center justify-center py-5 px-5 relative overflow-hidden"
+                data-aos="zoom-in" id="contact">
+                <h1 class=" font-popins-black text-2xl md:text-4xl"><span class=" text-border">Contact</span> ME</h1>
+                <form class="w-full  py-2 px-2 ">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-popins-medium mb-2" for="name">Name</label>
+                        <input
+                            class="w-full px-4 py-2 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800 bg-transparent"
+                            type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-popins-medium mb-2" for="email">Email</label>
+                        <input
+                            class="w-full px-4 py-2 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800 bg-transparent"
+                            type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-popins-medium mb-2" for="password">Comments (if
+                            any)</label>
+                        <input
+                            class="w-full px-4 py-2 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800 bg-transparent"
+                            type="text" placeholder="This is a cool website!" required>
+                    </div>
+                    <button
+                        class="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700 transition mt-2">Submit
+                    </button>
+                </form>
+            </section>
+            <!-- Contact -->
 
         </main>
         <!-- MAIN SECTION -->
