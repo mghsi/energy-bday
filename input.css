@@ -4,6 +4,7 @@
 
 ::-webkit-scrollbar {
   @apply w-3;
+  /* @apply hidden; */
 }
 
 ::-webkit-scrollbar-track {
