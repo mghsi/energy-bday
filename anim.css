@@ -1,12 +1,7 @@
-.cust-nav {
-  transition: width 2s;
-}
-.blob {
-  border-radius: 35% 65% 70% 30% / 57% 59% 41% 43%;
-}
-.text-border {
-  -webkit-text-stroke: 1px black;
-  color: transparent;
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
 }
 
 @keyframes slideIn {
@@ -60,6 +55,17 @@
   }
 }
 
+.cust-nav {
+  transition: width 2s;
+}
+.blob {
+  border-radius: 35% 65% 70% 30% / 57% 59% 41% 43%;
+}
+.text-border {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+}
+
 .animate-rotate-left {
   animation: rotateLeft 0.4s linear;
 }
@@ -74,19 +80,58 @@
   animation: slideOut 0.3s ease-in forwards;
 }
 
-.animate-marquee-left {
-  animation: marquee-left 10s linear infinite;
-}
-
-.animate-marquee-right {
-  animation: marquee-right 10s linear infinite;
-}
-
-.marquee {
-  overflow: hidden;
+.scroller__inner {
+  padding-block: 1rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.scroller__inner li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  box-shadow: 0 0.5rem 1rem -0.25rem  rgba(0, 0, 0, 0.173);
 }
 
-.marquee div {
-  white-space: nowrap;
+.scroller__inner li:hover{
+  background-color: rgba(128, 128, 128, 0.248);
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
 }

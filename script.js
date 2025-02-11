@@ -27,21 +27,21 @@ function toggleMenu(state) {
   }
 }
 
-function Marquee(selector, speed) {
-  const parentSelector = document.querySelector(selector);
-  const clone = parentSelector.innerHTML;
-  const firstElement = parentSelector.children[0];
-  let i = 0;
-  console.log(firstElement);
-  parentSelector.insertAdjacentHTML("beforeend", clone);
-  parentSelector.insertAdjacentHTML("beforeend", clone);
+const scrollers = document.querySelectorAll(".scroller");
 
-  setInterval(function () {
-    firstElement.style.marginLeft = `-${i}px`;
-    if (i > firstElement.clientWidth) {
-      i = 0;
-    }
-    i = i + speed;
-  }, 0);
+addAnimation();
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    scroller.setAttribute("data-animated", true);
+
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
 }
-window.addEventListener("load", Marquee(".marquee", 0.2));
