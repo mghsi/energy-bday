@@ -65,6 +65,10 @@
   -webkit-text-stroke: 1px black;
   color: transparent;
 }
+.text-border-white {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
 
 .animate-rotate-left {
   animation: rotateLeft 0.4s linear;
@@ -134,4 +138,8 @@
 
 .scroller[data-speed="slow"] {
   --_animation-duration: 60s;
+}
+body {
+  scroll-behavior: smooth;
+  transition: background-color 1s ease-in-out;
 }

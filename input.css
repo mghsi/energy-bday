@@ -16,6 +16,9 @@
     @apply rounded-s-md;
   } */
 
+html , body{
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: "popins-black";
   src: url("./assets/fonts/Poppins-Black.ttf");

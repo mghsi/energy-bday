@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="anim.css">
 </head>
 
-<body class=" max-w-screen-2xl bg-slate-100 mx-auto min-h-screen font-popins-regular overflow-x-hidden scroll-smooth">
+<body
+    class=" max-w-screen-2xl bg-gray-100 mx-auto min-h-screen font-popins-regular overflow-x-hidden dark:bg-gray-900 dark:text-gray-400 text-gray-800">
     <div class=" flex flex-col max-w-screen-xl mx-auto relative ">
         <!-- SIDE BAR -->
         <aside id="sidebar"
-            class=" top-0 left-0 h-[100svh] fixed z-20 w-full backdrop-blur-sm justify-start shadow-md  bg-slate-100 relativet px-4 py-3 flex-col gap-5 hidden">
+            class=" top-0 left-0 h-[100svh] fixed z-20 w-full backdrop-blur-sm justify-start shadow-md  bg-slate-100 dark:bg-gray-900 relativet px-4 py-3 flex-col gap-5 hidden">
 
             <div class=" flex items-center justify-end mb-2">
                 <button id="close-btn" class=" font-popins-semibold text-sm hover:bg-gray-200 rounded-full py-2 px-5"
@@ -59,11 +60,15 @@
         <!-- SIDE BAR -->
 
         <!-- NAVBAR HEADER-->
-        <header class=" mt-2 top-0 left-0 w-full sticky z-10" data-aos="fade-down">
-            <nav class="flex rounded-2xl items-center py-2 px-5 shadow-lg bg-opacity-10 backdrop-blur-md relative">
-                <div class="  font-popins-semibold text-sm flex flex-1 justify-center">
+        <header class=" mt-2 top-0 left-0 w-full sticky z-10" data-aos="fade-down" data-aos-once="true">
+            <nav
+                class="flex rounded-2xl items-center py-2 px-5 shadow-lg bg-opacity-10 backdrop-blur-md relative dark:border-2 dark:border-gray-800">
+                <button id="toggle-theme" class="  font-popins-semibold text-sm flex flex-1 justify-center ">
                     It's <span class="font-popins-black text-xl"> ME!</span>
-                </div>
+
+                    <span class="hidden dark:inline"> <i class="fa-solid fa-moon"></i></span> <span
+                        class="dark:hidden inline"><i class="fa-solid fa-sun"></i></span>
+                </button>
                 <div class="flex-1 md:flex justify-around hidden">
                     <a href="#hero" class=" font-popins-semibold text-sm flex items-center justify-center">
                         <i class="fa-solid fa-house mr-2"></i>
@@ -88,21 +93,21 @@
         <!-- MAIN SECTION -->
         <main class="flex-1">
             <!-- HERO BANNER -->
-            <section class=" h-[88svh] min-h-[400px] mt-2 mb-2 flex flex-col-reverse md:flex-row relative " id="hero">
+            <section class=" h-[88svh] min-h-[400px] mt-2 mb-2 flex flex-col-reverse xl:flex-row relative " id="hero">
                 <!-- HERO BOTTOM/LEFT -->
-                <div class=" flex relative items-center justify-start xl:px-0 px-5 xl:justify-center h-full md:flex-1"
+                <div class=" flex relative items-center justify-start xl:px-0 px-5 xl:justify-center h-full xl:flex-1"
                     data-aos="fade-right">
                     <div>
                         <h1 class="text-sm xl:text-base">
                             Hi there, its me! <br>
-                            <span class=" font-popins-black text-2xl md:text-4xl tracking-wider">
+                            <span class=" font-popins-black text-2xl xl:text-4xl tracking-wider">
                                 MY NAME
                             </span>
                         </h1>
-                        <h2 class=" text-sm md:text-base">
+                        <h2 class=" text-sm xl:text-base">
                             I am a web developer!
                         </h2>
-                        <div class=" text-xs md:text-sm mt-2">
+                        <div class=" text-xs xl:text-sm mt-2">
                             <p class=" text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
                                 sequi ad error quia
                                 maiores fugit. Similique laudantium quam nemo, at rerum neque debitis recusandae
@@ -127,11 +132,11 @@
                 <!-- HERO BOTTOM/LEFT -->
 
                 <!-- HERO TOP/RIGHT -->
-                <div class="flex relative h-full md:flex-1" data-aos="zoom-in">
+                <div class="flex relative h-full xl:flex-1" data-aos="zoom-in">
                     <div
-                        class="absolute w-1/2 -translate-x-1/2 -translate-y-1/2 blob aspect-square bg-black top-1/2 left-1/2">
+                        class="absolute w-1/2 -translate-x-1/2 -translate-y-1/2 blob aspect-square bg-black dark:bg-gray-800 top-1/2 left-1/2">
                     </div>
-                    <img class=" invert drop-shadow-lg absolute object-cover h-full -translate-x-1/2 -translate-y-1/2 md:h-auto md:w-2/3 top-1/2 hover:scale-105 left-1/2"
+                    <img class=" invert drop-shadow-lg absolute object-cover h-full -translate-x-1/2 -translate-y-1/2 xl:h-auto xl:w-2/3 top-1/2 hover:scale-105 left-1/2"
                         src="./assets/favicon.svg" alt="">
                 </div>
                 <!-- HERO TOP/RIGHT -->
@@ -143,7 +148,8 @@
                 class="mt-2 mb-2 flex  xl:flex-row-reverse flex-col text-center items-center py-5 px-5 relative overflow-hidden"
                 id="about">
                 <div data-aos="fade-up">
-                    <h1 class=" font-popins-black text-2xl md:text-4xl"><span class=" text-border">ABOUT</span> ME</h1>
+                    <h1 class=" font-popins-black text-2xl md:text-4xl"><span
+                            class=" text-border dark:text-gray-300">ABOUT</span> ME</h1>
                     <div class=" text-justify mt-5">
                         <p><span class="font-popins-bold underline tracking-tighter">Whoami?</span> I am a Lorem ipsum
                             dolor sit amet consectetur, adipisicing elit. Assumenda molestias consequatur
@@ -212,12 +218,12 @@
             <!-- Experience -->
             <section class=" mt-2 mb-2 flex  flex-col  items-center py-5 px-5  relative overflow-hidden" id="expirence">
                 <h1 class=" font-popins-black text-2xl md:text-4xl mb-10" data-aos="fade-up">Work<span
-                        class=" text-border"> Experience</span>
+                        class=" text-border dark:text-gray-300"> Experience</span>
                 </h1>
 
                 <div class="flex xl:gap-0 gap-2 w-full flex-col lg:flex-row ">
                     <!-- Experience1 -->
-                    <div class="border-2 border-black h-64 md:h-80 aspect-square px-5 py-5 flex flex-col w-full justify-center"
+                    <div class="border-2 border-black dark:border-gray-800 h-64 md:h-80 aspect-square px-5 py-5 flex flex-col w-full justify-center"
                         data-aos="fade-up">
                         <div class=" flex gap-2 text-base md:text-xl xl:text-2xl font-popins-semibold items-center">
                             <div>
@@ -248,7 +254,7 @@
                     </div>
 
                     <!-- Experience2 -->
-                    <div class="border-2 border-black h-64 md:h-80 aspect-square px-5 py-5 flex flex-col w-full justify-center"
+                    <div class="border-2 border-black dark:border-gray-800  h-64 md:h-80 aspect-square px-5 py-5 flex flex-col w-full justify-center"
                         data-aos="fade-up">
                         <div class=" flex gap-2 text-base md:text-xl xl:text-2xl font-popins-semibold items-center">
                             <div>
@@ -280,7 +286,7 @@
                     </div>
 
                     <!-- Experience3 -->
-                    <div class="border-2 border-black h-64 md:h-80 aspect-square px-5 py-5 flex flex-col w-full justify-center"
+                    <div class="border-2 border-black dark:border-gray-800  h-64 md:h-80 aspect-square px-5 py-5 flex flex-col w-full justify-center"
                         data-aos="fade-up">
                         <div class=" flex gap-2 text-base md:text-xl xl:text-2xl font-popins-semibold items-center">
                             <div>
@@ -318,9 +324,9 @@
             <!-- LatestWork -->
             <section class="flex mt-2 mb-2 flex-col  justify-center py-5 px-5 relative overflow-hidden">
                 <div class="flex items-center w-full text-center gap-2 mb-5" data-aos="fade-up">
-                    <div class="h-[.1rem] bg-gray-400 flex-1"></div>
-                    <div class="text-gray-500 ">some of my latest work</div>
-                    <div class="h-[.1rem] bg-gray-400 flex-1"></div>
+                    <div class="h-[.1rem] bg-gray-400 dark:bg-gray-500 flex-1"></div>
+                    <div class="text-gray-500  ">some of my latest work</div>
+                    <div class="h-[.1rem] bg-gray-400  dark:bg-gray-500 flex-1"></div>
                 </div>
 
                 <div class=" flex flex-col lg:flex-row w-full">
@@ -328,30 +334,30 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
                         <!-- project1 -->
                         <a href="#" data-aos="fade-up"
-                            class="group border-2 p-4 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300">
+                            class="group border-2  dark:border-gray-700 p-4 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300">
                             <div class="overflow-hidden">
                                 <img src="assets/images/image-placeholder.webp" alt="project1"
                                     class="w-full h-48 object-cover mb-4 rounded-md transition-transform duration-300 transform scale-105 group-hover:scale-100" />
                             </div>
-                            <h3 class="text-base text-gray-800 font-popins-bold">project-1</h3>
+                            <h3 class="text-base font-popins-bold">project-1</h3>
 
-                            <p class="text-sm text-gray-600 mt-2">
+                            <p class="text-sm  mt-2">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis facilis quae,
                                 quaerat vero asperiores eum quod voluptas et? Sunt, dolore in illo libero a possimus
                                 voluptatem delectus. Quos, modi unde!
                             </p>
                             <p class="float-right "><i class=" fa-solid fa-code"></i></i></p>
                         </a>
-                        <!-- project1 -->
+                        <!-- project2 -->
                         <a href="#" data-aos="fade-up"
-                            class="group border-2 p-4 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300">
+                            class="group border-2  dark:border-gray-700 p-4 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300">
                             <div class="overflow-hidden">
                                 <img src="assets/images/image-placeholder.webp" alt="project1"
                                     class="w-full h-48 object-cover mb-4 rounded-md transition-transform duration-300 transform scale-105 group-hover:scale-100" />
                             </div>
-                            <h3 class="text-base text-gray-800 font-popins-bold">project-2</h3>
+                            <h3 class="text-base  font-popins-bold">project-2</h3>
 
-                            <p class="text-sm text-gray-600 mt-2">
+                            <p class="text-sm mt-2">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, qui officia obcaecati
                                 quod laborum rem itaque, mollitia atque, labore accusantium similique maiores amet
                                 quisquam error. Nobis harum esse officiis aliquid!
@@ -360,14 +366,14 @@
                         </a>
                         <!-- project3 -->
                         <a href="#" data-aos="fade-up"
-                            class="group border-2 p-4 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300">
+                            class="group border-2 dark:border-gray-700 p-4 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300">
                             <div class="overflow-hidden">
                                 <img src="assets/images/image-placeholder.webp" alt="project1"
                                     class="w-full h-48 object-cover mb-4 rounded-md transition-transform duration-300 transform scale-105 group-hover:scale-100" />
                             </div>
-                            <h3 class="text-base text-gray-800 font-popins-bold">project-3</h3>
+                            <h3 class="text-base font-popins-bold">project-3</h3>
 
-                            <p class="text-sm text-gray-600 mt-2">
+                            <p class="text-sm mt-2">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolore quis, fugit
                                 sapiente necessitatibus dolores, ex numquam voluptates iste autem rem quam repellendus
                                 velit eveniet? Quidem corrupti excepturi dolorum a?
@@ -384,7 +390,8 @@
             <!-- Contact -->
             <section class="flex mt-2 mb-2 flex-col items-center justify-center py-5 px-5 relative overflow-hidden"
                 data-aos="zoom-in" id="contact">
-                <h1 class=" font-popins-black text-2xl md:text-4xl"><span class=" text-border">Contact</span> ME</h1>
+                <h1 class=" font-popins-black text-2xl md:text-4xl"><span
+                        class=" text-border dark:text-gray-300">Contact</span> ME</h1>
                 <form class="w-full  py-2 px-2 ">
                     <div class="mb-4">
                         <label class="block text-gray-700 font-popins-medium mb-2" for="name">Name</label>
@@ -406,7 +413,7 @@
                             type="text" placeholder="This is a cool website!" required>
                     </div>
                     <button
-                        class="w-full bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-700 transition mt-2">Submit
+                        class="w-full bg-gray-900  text-white dark:text-gray-900 dark:bg-gray-300 py-2 rounded-lg hover:bg-gray-700 transition mt-2">Submit
                     </button>
                 </form>
             </section>
@@ -421,7 +428,8 @@
 
         <!-- FOOTER COPY -->
         <div class=" flex justify-around items-center text-white lg:w-1/2 w-11/12">
-            <p class="text-xs text-center">&copy;copyright - all right reserved 2025<br>Lorem ipsum dolor sit amet
+            <p class="text-[.5rem] md:text-xs text-center">&copy;copyright - all right reserved 2025<br>Lorem ipsum
+                dolor sit amet
                 consectetur adipisicing elit.
                 Aut
                 perferendis rem minus
@@ -461,7 +469,7 @@
     AOS.init({
         duration: 1000,
         easing: 'ease',
-        once: true,
+        once: false,
     });
 </script>
 <script src="script.js"></script>
