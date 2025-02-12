@@ -95,8 +95,6 @@ npx tailwindcss -i input.css -o style.css --watch
 
 Before deploying, ensure that the font rules from `input.css` are copied into `style.css`, or else they will not take effect.
 
-## Customization
-
 ### 5. Git Ignore
 
 After making customizations, ensure that you ignore unnecessary files by adding the following to your `.gitignore` file:
@@ -110,6 +108,8 @@ tailwind.config.js
 
 This will prevent unnecessary files from being pushed to your repository.
 
+## Customization
+
 - **HTML**: Modify `index.html` to replace placeholder content with your own.
 - **CSS**: Edit `anim.css` for custom animations or modify `input.css` if you are using Tailwind.
 - **JavaScript**: Modify `script.js` to add interactivity.
@@ -118,7 +118,3 @@ This will prevent unnecessary files from being pushed to your repository.
 ## Contribution
 
 Feel free to fork the repository and submit pull requests for improvements.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
