@@ -5,7 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/favicon.svg">
-    <title>Portfolio</title>
+    <title>Portfolio - By Sreekesh K Prabhu</title>
+    <!-- SEO -->
+    <meta name="description"
+        content="Sreekesh K Prabhu is a passionate web developer from India, constantly exploring new technologies and diving into challenging projects. Discover more about his journey in the digital world." />
+    <meta name="keywords"
+        content="Sreekesh, SRK, Sreekesh K Prabhu, web developer, India, tech enthusiast, JavaScript, Docker, React, MERN stack, portfolio, technology exploration" />
+    <meta name="author" content="Sreekesh K Prabhu" />
+
+    <meta property="og:title" content="Sreekesh K Prabhu - Passionate Developer from India" />
+    <meta property="og:description"
+        content="Explore the portfolio of Sreekesh K Prabhu, a web developer with a keen interest in technology and constant learning." />
+    <meta property="og:image" content="./assets/favicon.svg" />
+    <meta property="og:url" content="https://sreekeshkprabhu.me" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sreekesh K Prabhu - Passionate Developer from India" />
+    <meta name="twitter:description"
+        content="Explore the portfolio of Sreekesh K Prabhu, a web developer with a keen interest in technology and constant learning." />
+    <meta name="twitter:image" content="./assets/favicon.svg" />
+
+    <link rel="icon" type="image/png" href="./assets/favicon.svg" />
+    <link rel="canonical" href="https://sreekeshkprabhu.me" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <!-- SEO -->
+
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -63,7 +89,8 @@
         <header class=" mt-2 top-0 left-0 w-full sticky z-10" data-aos="fade-down" data-aos-once="true">
             <nav
                 class="flex rounded-2xl items-center py-2 px-5 shadow-lg bg-opacity-10 backdrop-blur-md relative dark:border-2 dark:border-gray-800">
-                <button id="toggle-theme" class="  font-popins-semibold text-sm flex flex-1 justify-center ">
+                <button name="toggle-theme" id="toggle-theme"
+                    class="  font-popins-semibold text-sm flex flex-1 justify-center ">
                     It's <span class="font-popins-black text-xl"> ME!</span>
 
                     <span class="hidden dark:inline"> <i class="fa-solid fa-moon"></i></span> <span
@@ -81,7 +108,7 @@
                         Contact
                     </a>
                 </div>
-                <button id="open-btn"
+                <button id="open-btn" name="open-btn"
                     class=" relative font-popins-semibold text-sm items-center justify-center flex md:hidden hover:bg-gray-200 py-2 px-4 rounded-full z-30"
                     onclick="toggleMenu('open')">
                     <i class="fa-solid fa-bars"></i>
@@ -108,24 +135,29 @@
                             I am a web developer!
                         </h2>
                         <div class=" text-xs xl:text-sm mt-2">
-                            <p class=" text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                                sequi ad error quia
-                                maiores fugit. Similique laudantium quam nemo, at rerum neque debitis recusandae
-                                voluptate, eligendi nesciunt adipisci consequuntur numquam!</p>
+                            <p class=" text-justify">I’m a passionate developer from India, constantly diving into new
+                                tech challenges. My curiosity fuels daily discoveries and an endless quest for
+                                knowledge.</p>
                         </div>
                         <div class=" flex justify-start items-center gap-10 mt-2 flex-wrap">
-                            <div>
+                            <a href="https://github.com/sreekesh-k" aria-label="Visit Sreekesh's GitHub profile"
+                                title="GitHub" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-github"></i>
-                            </div>
-                            <div>
+                            </a>
+                            <a href="mailto:sreekeshkprabhu.arp@gmail.com" aria-label="Send an email to Sreekesh"
+                                title="Email">
                                 <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sreekesh-k-prabhu-7b835124a"
+                                aria-label="Visit Sreekesh's LinkedIn profile" title="LinkedIn" target="_blank"
+                                rel="noopener noreferrer">
                                 <i class="fa-brands fa-linkedin"></i>
-                            </div>
-                            <div>
+                            </a>
+                            <a href="https://www.instagram.com/sreekesh_k_prabhu/"
+                                aria-label="Visit Sreekesh's Instagram profile" title="Instagram" target="_blank"
+                                rel="noopener noreferrer">
                                 <i class="fa-brands fa-instagram"></i>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -137,7 +169,7 @@
                         class="absolute w-1/2 -translate-x-1/2 -translate-y-1/2 blob aspect-square bg-black dark:bg-gray-800 top-1/2 left-1/2">
                     </div>
                     <img class=" invert drop-shadow-lg absolute object-cover h-full -translate-x-1/2 -translate-y-1/2 xl:h-auto xl:w-2/3 top-1/2 hover:scale-105 left-1/2"
-                        src="./assets/favicon.svg" alt="">
+                        src="./assets/favicon.svg" alt="Hero">
                 </div>
                 <!-- HERO TOP/RIGHT -->
             </section>
@@ -151,11 +183,19 @@
                     <h1 class=" font-popins-black text-2xl md:text-4xl"><span
                             class=" text-border dark:text-gray-300">ABOUT</span> ME</h1>
                     <div class=" text-justify mt-5">
-                        <p><span class="font-popins-bold underline tracking-tighter">Whoami?</span> I am a Lorem ipsum
-                            dolor sit amet consectetur, adipisicing elit. Assumenda molestias consequatur
-                            perspiciatis totam officia tenetur explicabo nulla repellendus tempore sunt corporis unde
-                            quas
-                            ullam, hic ipsum asperiores deleniti. Sapiente, libero.</p>
+                        <p><span class="font-popins-bold underline tracking-tighter">Whoami?</span>
+                            visit my
+                            <a href="https://sreekeshkprabhu.me/" target="_blank" rel="noopener noreferrer"
+                                aria-label="sreekesh k prabhu" title="sreekesh"
+                                class=" text-black tracking-tighter font-popins-black underline">
+                                portfolio
+                            </a>
+                            to know more
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consectetur necessitatibus,
+                            suscipit quod, dolor voluptate ipsa architecto dolores nostrum excepturi qui perspiciatis
+                            aperiam obcaecati ducimus tempore vel eius ut labore.
+                        </p>
                     </div>
                     <div class=" text-justify mt-5">
                         <p><span class="font-popins-bold underline tracking-tighter">EducationQualification</span>
@@ -230,9 +270,9 @@
                                 <i class="fa-solid fa-desktop"></i>
                             </div>
                             <div>
-                                <h3>
+                                <h2>
                                     Software Developer DotNEtCore
-                                </h3>
+                                </h2>
 
                             </div>
                         </div>
@@ -261,10 +301,10 @@
                                 <i class="fa-brands fa-flutter"></i>
                             </div>
                             <div>
-                                <h3>
+                                <h2>
                                     Flutter Developer Android,IOS
 
-                                </h3>
+                                </h2>
                             </div>
                         </div>
 
@@ -293,9 +333,9 @@
                                 <i class="fa-brands fa-react"></i>
                             </div>
                             <div>
-                                <h3>
+                                <h2>
                                     Frontend Dev ReactJs, NextJs
-                                </h3>
+                                </h2>
                             </div>
                         </div>
 
@@ -339,7 +379,7 @@
                                 <img src="assets/images/image-placeholder.webp" alt="project1"
                                     class="w-full h-48 object-cover mb-4 rounded-md transition-transform duration-300 transform scale-105 group-hover:scale-100" />
                             </div>
-                            <h3 class="text-base font-popins-bold">project-1</h3>
+                            <h2 class="text-base font-popins-bold">project-1</h2>
 
                             <p class="text-sm  mt-2">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis facilis quae,
@@ -355,7 +395,7 @@
                                 <img src="assets/images/image-placeholder.webp" alt="project1"
                                     class="w-full h-48 object-cover mb-4 rounded-md transition-transform duration-300 transform scale-105 group-hover:scale-100" />
                             </div>
-                            <h3 class="text-base  font-popins-bold">project-2</h3>
+                            <h2 class="text-base  font-popins-bold">project-2</h2>
 
                             <p class="text-sm mt-2">
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, qui officia obcaecati
@@ -371,7 +411,7 @@
                                 <img src="assets/images/image-placeholder.webp" alt="project1"
                                     class="w-full h-48 object-cover mb-4 rounded-md transition-transform duration-300 transform scale-105 group-hover:scale-100" />
                             </div>
-                            <h3 class="text-base font-popins-bold">project-3</h3>
+                            <h2 class="text-base font-popins-bold">project-3</h2>
 
                             <p class="text-sm mt-2">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolore quis, fugit
@@ -391,7 +431,8 @@
             <section class="flex mt-2 mb-2 flex-col items-center justify-center py-5 px-5 relative overflow-hidden"
                 data-aos="zoom-in" id="contact">
                 <h1 class=" font-popins-black text-2xl md:text-4xl"><span
-                        class=" text-border dark:text-gray-300">Contact</span> ME</h1>
+                        class=" text-border dark:text-gray-300">Contact</span>
+                    ME</h1>
                 <form class="w-full  py-2 px-2 ">
                     <div class="mb-4">
                         <label class="block text-gray-700 font-popins-medium mb-2" for="name">Name</label>
@@ -412,7 +453,7 @@
                             class="w-full px-4 py-2 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-800 bg-transparent"
                             type="text" placeholder="This is a cool website!" required>
                     </div>
-                    <button
+                    <button id="submit" name="submit"
                         class="w-full bg-gray-900  text-white dark:text-gray-900 dark:bg-gray-300 py-2 rounded-lg hover:bg-gray-700 transition mt-2">Submit
                     </button>
                 </form>
@@ -427,33 +468,34 @@
     <footer class=" flex flex-col relative mt-10 bg-black w-full items-center justify-center py-2 px-3 gap-4">
         <!-- FOOTER LINKS -->
         <div class=" flex justify-center gap-4 md:gap-10 items-center text-white w-1/2 mt-5">
-            <a href="https://github.com" class="flex  items-center justify-center text-xs gap-1">
+            <a href="https://github.com/sreekesh-k" aria-label="Visit Sreekesh's GitHub profile" title="GitHub"
+                target="_blank" rel="noopener noreferrer" class="flex  items-center justify-center text-xs gap-1">
                 <i class="fa-brands fa-github"></i>
                 <div>Github</div>
             </a>
-            <a href="https://gmail.com" class="flex  items-center justify-center text-xs gap-1">
+            <a href="mailto:sreekeshkprabhu.arp@gmail.com" aria-label="Send an email to Sreekesh" title="Email"
+                class="flex  items-center justify-center text-xs gap-1">
                 <i class="fa-solid fa-envelope"></i>
                 <div>Gmail</div>
             </a>
-            <a href="https://linkdin.com" class="flex  items-center justify-center text-xs gap-1">
+            <a href="https://www.linkedin.com/in/sreekesh-k-prabhu-7b835124a"
+                aria-label="Visit Sreekesh's LinkedIn profile" title="LinkedIn" target="_blank"
+                rel="noopener noreferrer" class="flex  items-center justify-center text-xs gap-1">
                 <i class="fa-brands fa-linkedin"></i>
                 <div>Linkdin</div>
             </a>
-            <a href="https://instagram.com" class="flex items-center justify-center text-xs gap-1">
+            <a href="https://www.instagram.com/sreekesh_k_prabhu/" aria-label="Visit Sreekesh's Instagram profile"
+                title="Instagram" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-center text-xs gap-1">
                 <i class="fa-brands fa-instagram"></i>
                 <div>Instagram</div>
             </a>
         </div>
         <!-- FOOTER COPY -->
         <div class=" flex justify-around items-center text-white lg:w-1/2 w-11/12">
-            <p class="text-[.5rem] md:text-xs text-center">&copy;copyright - all right reserved 2025<br>Lorem ipsum
-                dolor sit amet
-                consectetur adipisicing elit.
-                Aut
-                perferendis rem minus
-                assumenda unde fugit
-                aspernatur optio dignissimos tenetur, quod quis praesentium modi quibusdam accusantium numquam
-                laboriosam corrupti provident amet!</p>
+            <p class="text-[.5rem] md:text-xs text-center">&copy;copyright - all right reserved 2025<br>
+                This is a free portfolio template created by Sreekesh K Prabhu
+            </p>
         </div>
 
     </footer>
