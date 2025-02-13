@@ -123,12 +123,26 @@ const getChartOptions = () => {
   };
 };
 
-if (document.getElementById("pie-chart") && typeof ApexCharts !== "undefined") {
-  const chart = new ApexCharts(
-    document.getElementById("pie-chart"),
-    getChartOptions()
-  );
-  chart.render();
+if (typeof ApexCharts !== "undefined") {
+  const chartElement = document.getElementById("pie-chart");
+
+  if (chartElement) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const chart = new ApexCharts(chartElement, getChartOptions());
+            chart.render();
+
+            observer.unobserve(chartElement);
+          }
+        });
+      },
+      { threshold: 1 }
+    );
+
+    observer.observe(chartElement);
+  }
 }
 
 const cursorSmallDot = document.getElementById("cursor-small-dot");
