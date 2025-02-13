@@ -16,7 +16,8 @@
     @apply rounded-s-md;
   } */
 
-html , body{
+html,
+body {
   scroll-behavior: smooth;
 }
 @font-face {

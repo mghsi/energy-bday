@@ -130,3 +130,44 @@ if (document.getElementById("pie-chart") && typeof ApexCharts !== "undefined") {
   );
   chart.render();
 }
+
+const cursorSmallDot = document.getElementById("cursor-small-dot");
+const cursorBigDot = document.getElementById("cursor-big-dot");
+
+let smallDotPosition = { x: 0, y: 0 };
+let bigDotPosition = { x: 0, y: 0 };
+
+const translate3d = (x, y) => `translate3d(${x}px, ${y}px, 0)`;
+
+const handleMouseMove = (e) => {
+  smallDotPosition.x = e.clientX;
+  smallDotPosition.y = e.clientY;
+
+  bigDotPosition.x = e.clientX - 4;
+  bigDotPosition.y = e.clientY - 8;
+
+  cursorSmallDot.style.transform = translate3d(
+    smallDotPosition.x,
+    smallDotPosition.y
+  );
+  cursorBigDot.style.transform = translate3d(
+    bigDotPosition.x,
+    bigDotPosition.y
+  );
+};
+
+let timeout;
+const mouseMoveHandler = (e) => {
+  cursorSmallDot.classList.remove("hidden");
+  cursorBigDot.classList.remove("hidden");
+
+  window.requestAnimationFrame(() => handleMouseMove(e));
+
+  clearTimeout(timeout);
+
+  timeout = setTimeout(() => {
+    cursorSmallDot.classList.add("hidden");
+    cursorBigDot.classList.add("hidden");
+  }, 1000);
+};
+window.addEventListener("mousemove", mouseMoveHandler);
