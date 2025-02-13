@@ -7,11 +7,11 @@ document.documentElement.classList.toggle(
 
 let themeBtn = document.getElementById("toggle-theme");
 
-themeBtn.addEventListener("click", () => {  
+themeBtn.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
   if (document.documentElement.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
-  } else {  
+  } else {
     localStorage.setItem("theme", "light");
   }
 });
@@ -63,4 +63,70 @@ function addAnimation() {
       scrollerInner.appendChild(duplicatedItem);
     });
   });
+}
+
+const getChartOptions = () => {
+  return {
+    series: [52.8, 26.8, 20.4],
+    colors: ["#1C64F2", "#16BDCA", "#9061F9"],
+    chart: {
+      height: 420,
+      width: "100%",
+      type: "pie",
+    },
+    stroke: {
+      colors: ["white"],
+      lineCap: "",
+    },
+    plotOptions: {
+      pie: {
+        labels: {
+          show: true,
+        },
+        size: "100%",
+        dataLabels: {
+          offset: -25,
+        },
+      },
+    },
+    labels: ["Java", "php", "JavaScript"],
+    dataLabels: {
+      enabled: true,
+      style: {
+        fontFamily: "Inter, sans-serif",
+      },
+    },
+    legend: {
+      position: "bottom",
+      fontFamily: "Inter, sans-serif",
+    },
+    yaxis: {
+      labels: {
+        formatter: function (value) {
+          return value + "%";
+        },
+      },
+    },
+    xaxis: {
+      labels: {
+        formatter: function (value) {
+          return value + "%";
+        },
+      },
+      axisTicks: {
+        show: false,
+      },
+      axisBorder: {
+        show: false,
+      },
+    },
+  };
+};
+
+if (document.getElementById("pie-chart") && typeof ApexCharts !== "undefined") {
+  const chart = new ApexCharts(
+    document.getElementById("pie-chart"),
+    getChartOptions()
+  );
+  chart.render();
 }
