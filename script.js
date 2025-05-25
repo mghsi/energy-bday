@@ -1,8 +1,8 @@
 document.documentElement.classList.toggle(
   "dark",
   localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
 );
 
 let themeBtn = document.getElementById("toggle-theme");
@@ -185,3 +185,20 @@ const mouseMoveHandler = (e) => {
   }, 1000);
 };
 window.addEventListener("mousemove", mouseMoveHandler);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.querySelector('#contact form');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const comments = document.querySelector('input[type="text"]:last-of-type').value;
+
+    alert(`Danke ${name}! German Mustache hat Ihre Nachricht erhalten.`);
+
+    // Optional: Clear the form
+    contactForm.reset();
+  });
+});
